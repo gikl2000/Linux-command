@@ -1,0 +1,15 @@
+
+Error Can't create file: <File Name>. Right-click the folder you want to create the file in and then click Properties on the shortcut menu to check your permissions for the folder.
+
+When performing a mail merge with more then 100 contacts with an attachment, you receiving the following error message: "Can't create file: . Right-click the folder you want to create the file in, and then click Properties on the shortcut menu to check your permissions for the folder."
+This message appears because the Windows® User Temporary Internet Files folder has become full. After removing these files, the mail merge will be able to continue. Please use the following steps to resolve this issue:
+Type regedit in the Open field, and then click OK. The Windows Registry Editor launches
+
+Navigate to the following location:
+HKEY_CURRENT_USER\Software\Microsoft\Office\11.0\Outlook\Security
+Note the value in the Data column for the Name item OutlookSecureTempFolder. In our example it is:
+C:\Documents and Settings\test\Local Settings\Temporary Internet Files\OLK4F\
+Open Windows Explorer®
+Browse to the following location that was represented in the Data column from Step 3.:
+Hold the Ctrl+A buttons to select all files in this folder.
+Delete the selected files.
