@@ -1,3 +1,4 @@
+change IP
 cd /etc/netplan
 LS
 sudo vi 50-cloud-init.yaml
